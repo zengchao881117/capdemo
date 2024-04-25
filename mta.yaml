@@ -5,7 +5,7 @@ version: 1.0.0
 modules:
 - name: capdemo-srv
   type: nodejs
-  path: gen/srv
+  path: srv
   requires:
   - name: capdemo-auth
   - name: capdemo-db
@@ -19,7 +19,7 @@ modules:
     builder: npm
 - name: capdemo-db-deployer
   type: hdb
-  path: gen/db
+  path: db
   requires:
   - name: capdemo-db
   parameters:

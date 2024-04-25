@@ -28,7 +28,7 @@ modules:
 
   - name: capdemo
     type: approuter.nodejs
-    path: app\router
+    path: app\book
     parameters:
       keep-existing-routes: true
       disk-quota: 256M

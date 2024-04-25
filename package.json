@@ -1,7 +1,7 @@
 {
     "name": "capdemo",
     "version": "1.0.0",
-    "description": "A simple CAP project.",
+    "description": "A simple CAP project .",
     "repository": "https://github.com/zengchao881117/capdemo.git",
     "license": "UNLICENSED",
     "private": true,

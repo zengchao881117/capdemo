@@ -20,7 +20,7 @@
     "scripts": {
         "start": "cds-serve",
         "watch-book": "cds watch --open book/webapp/index.html?sap-ui-xx-viewCache=false",
-        "undeploy": "cf undeploy capdemoo --delete-services --delete-service-keys --delete-service-brokers",
+        "undeploy": "cf undeploy capdemo --delete-services --delete-service-keys --delete-service-brokers",
         "build": "rimraf resources mta_archives && mbt build --mtar archive",
         "deploy": "cf deploy mta_archives/archive.mtar --retries 1"
     },

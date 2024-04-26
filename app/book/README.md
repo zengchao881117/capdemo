@@ -1,7 +1,7 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Thu Apr 25 2024 17:04:34 GMT+0800 (China Standard Time)|
+|**Generation Date and Time**<br>Fri Apr 26 2024 15:10:06 GMT+0800 (China Standard Time)|
 |**App Generator**<br>@sap/generator-fiori-elements|
 |**App Generator Version**<br>1.12.5|
 |**Generation Platform**<br>Visual Studio Code|
@@ -10,7 +10,7 @@
 |**Service URL**<br>http://localhost:4004/odata/v4/catalog/
 |**Module Name**<br>book|
 |**Application Title**<br>App Title|
-|**Namespace**<br>nsdemo|
+|**Namespace**<br>ns|
 |**UI5 Theme**<br>sap_horizon|
 |**UI5 Version**<br>1.123.1|
 |**Enable Code Assist Libraries**<br>False|

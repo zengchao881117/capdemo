@@ -5,7 +5,7 @@
     {
       "source": "^/odata/(.*)$",
       "target": "/odata/$1",
-      "destination": "cf_dest",
+      "destination": "capdemo_dest",
       "authenticationType": "xsuaa",
       "csrfProtection": false
     },

@@ -1,11 +1,11 @@
 _schema-version: "3.1"
-ID: capdemo
+ID: capdemoo
 description: A simple CAP project.
 version: 1.0.0
 modules:
 - name: capdemo-srv
   type: nodejs
-  path: srv
+  path: gen/srv
   requires:
   - name: capdemo-auth
   - name: capdemo-db
@@ -19,26 +19,47 @@ modules:
     builder: npm
 - name: capdemo-db-deployer
   type: hdb
-  path: db
+  path: gen/db
   requires:
   - name: capdemo-db
   parameters:
     buildpack: nodejs_buildpack
-- name: capdemo-app-content
+- name: capdemo
+  type: approuter.nodejs
+  path: app\router
+  requires:
+  - name: srv-api
+    group: destinations
+    properties:
+      forwardAuthToken: true
+      name: srv-api
+      url: ~{srv-url}
+  - name: capdemo-auth
+  - name: capdemoo-destination-service
+    group: destinations
+    properties:
+      forwardAuthToken: false
+      name: ui5
+      url: https://ui5.sap.com
+  parameters:
+    disk-quota: 256M
+    keep-existing-routes: true
+    memory: 256M
+- name: capdemoo-app-content
   type: com.sap.application.content
   path: .
   requires:
-  - name: capdemo-repo-host
+  - name: capdemoo-repo-host
     parameters:
       content-target: true
   build-parameters:
     build-result: resources
     requires:
     - artifacts:
-      - nsdemobook.zip
-      name: nsdemobook
+      - nsbook.zip
+      name: nsbook
       target-path: resources/
-- name: nsdemobook
+- name: nsbook
   type: html5
   path: app/book
   build-parameters:
@@ -63,13 +84,13 @@ resources:
   parameters:
     service: hana
     service-plan: hdi-shared
-- name: capdemo-repo-host
+- name: capdemoo-repo-host
   type: org.cloudfoundry.managed-service
   parameters:
     service: html5-apps-repo
-    service-name: capdemo-html5-srv
+    service-name: capdemoo-html5-srv
     service-plan: app-host
-- name: capdemo-destination-service
+- name: capdemoo-destination-service
   type: org.cloudfoundry.managed-service
   parameters:
     config:
@@ -85,7 +106,7 @@ resources:
           existing_destinations_policy: update
       version: 1.0.0
     service: destination
-    service-name: capdemo-destination-service
+    service-name: capdemoo-destination-service
     service-plan: lite
 parameters:
   deploy_mode: html5-repo

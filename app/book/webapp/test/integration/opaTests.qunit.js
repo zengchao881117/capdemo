@@ -1,15 +1,15 @@
 sap.ui.require(
     [
         'sap/fe/test/JourneyRunner',
-        'nsdemo/book/test/integration/FirstJourney',
-		'nsdemo/book/test/integration/pages/BooksList',
-		'nsdemo/book/test/integration/pages/BooksObjectPage'
+        'ns/book/test/integration/FirstJourney',
+		'ns/book/test/integration/pages/BooksList',
+		'ns/book/test/integration/pages/BooksObjectPage'
     ],
     function(JourneyRunner, opaJourney, BooksList, BooksObjectPage) {
         'use strict';
         var JourneyRunner = new JourneyRunner({
             // start index.html in web folder
-            launchUrl: sap.ui.require.toUrl('nsdemo/book') + '/index.html'
+            launchUrl: sap.ui.require.toUrl('ns/book') + '/index.html'
         });
 
        

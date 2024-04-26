@@ -1,7 +1,7 @@
 {
   "_version": "1.59.0",
   "sap.app": {
-    "id": "nsdemo.book",
+    "id": "ns.book",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -13,7 +13,7 @@
     "sourceTemplate": {
       "id": "@sap/generator-fiori:lrop",
       "version": "1.12.5",
-      "toolsId": "3106b69a-5abc-4254-8c43-c0525b6ea241"
+      "toolsId": "500683c5-5311-4840-bb86-de7e0a00146d"
     },
     "dataSources": {
       "mainService": {
@@ -22,19 +22,6 @@
         "settings": {
           "annotations": [],
           "odataVersion": "4.0"
-        }
-      }
-    },
-    "crossNavigation": {
-      "inbounds": {
-        "book-list": {
-          "semanticObject": "book",
-          "action": "list",
-          "title": "{{flpTitle}}",
-          "signature": {
-            "parameters": {},
-            "additionalParameters": "allowed"
-          }
         }
       }
     }
@@ -74,7 +61,7 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "nsdemo.book.i18n.i18n"
+          "bundleName": "ns.book.i18n.i18n"
         }
       },
       "": {

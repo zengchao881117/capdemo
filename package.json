@@ -1,8 +1,8 @@
 {
     "name": "capdemo",
     "version": "1.0.0",
-    "description": "A simple CAP project .",
-    "repository": "https://github.com/zengchao881117/capdemo.git",
+    "description": "A simple CAP project.",
+    "repository": "<Add your repository here>",
     "license": "UNLICENSED",
     "private": true,
     "dependencies": {
@@ -20,14 +20,14 @@
     "scripts": {
         "start": "cds-serve",
         "watch-book": "cds watch --open book/webapp/index.html?sap-ui-xx-viewCache=false",
-        "undeploy": "cf undeploy capdemo --delete-services --delete-service-keys --delete-service-brokers",
+        "undeploy": "cf undeploy capdemoo --delete-services --delete-service-keys --delete-service-brokers",
         "build": "rimraf resources mta_archives && mbt build --mtar archive",
         "deploy": "cf deploy mta_archives/archive.mtar --retries 1"
     },
     "cds": {
         "requires": {
-            "auth":"xsuaa",
-            "db": "sqlite"
+            "auth": "xsuaa",
+            "db": "hana"
         }
     },
     "sapux": [

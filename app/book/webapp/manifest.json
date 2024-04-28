@@ -13,7 +13,7 @@
     "sourceTemplate": {
       "id": "@sap/generator-fiori:lrop",
       "version": "1.12.5",
-      "toolsId": "0255dfec-659d-43fc-b3e6-2f308e5e1648"
+      "toolsId": "5ce399b6-a608-432a-b18d-a5eae488fb74"
     },
     "dataSources": {
       "mainService": {
@@ -22,6 +22,19 @@
         "settings": {
           "annotations": [],
           "odataVersion": "4.0"
+        }
+      }
+    },
+    "crossNavigation": {
+      "inbounds": {
+        "book-list": {
+          "semanticObject": "book",
+          "action": "list",
+          "title": "{{flpTitle}}",
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          }
         }
       }
     }

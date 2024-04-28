@@ -4,6 +4,6 @@ service CatalogService {
     @readonly
     entity Books @(restrict: [{
         grant: ['*'],
-        to   : ['BookManager']
+        to:['BookManager']
     }]) as projection on my.Books;
 }

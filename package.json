@@ -26,9 +26,9 @@
   },
   "cds": {
     "requires": {
-      "auth": "xsuaa",
-      "db": "hana"
-    }
+        "auth": "xsuaa",
+        "db": "hana"
+      }
   },
   "sapux": [
     "app/book"

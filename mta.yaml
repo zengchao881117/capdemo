@@ -75,6 +75,11 @@ resources:
     type: org.cloudfoundry.managed-service
     parameters:
       config:
+        role-collections:
+        - description: Manage books
+          name: BookManager-${space}
+          role-template-references:
+          - $XSAPPNAME.BookManager
         tenant-mode: dedicated
         xsappname: capdemo-${org}-${space}
       path: ./xs-security.json

@@ -8,10 +8,10 @@
     {
       "name":"BookManager",
       "description":"BookManger",
-      "scopes-references":[
+      "scope-references":[
         "$XSAPPNAME.BookManager"
       ],
-      "attributes-references":[]
+      "attribute-references":[]
     }
   ],
   "oauth2-configuration": {

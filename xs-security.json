@@ -1,4 +1,5 @@
 {
+  "xsappname":"capdemo",
   "scopes": [
     {
       "name": "$XSAPPNAME.BookManager",
@@ -18,7 +19,7 @@
   ],
   "oauth2-configuration": {
     "redirect-uris": [
-      "https://*.us10-001.hana.ondemand.com/**" 
+      "https://*.us10-001.hana.ondemand.com/login/callback" 
     ]
   }
 }
